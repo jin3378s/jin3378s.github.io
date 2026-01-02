@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>정영욱 모바일 청첩장</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f1eb;
+        --ink: #2a2a2a;
+        --accent: #9c6b3b;
+        --cream: #fff8f0;
+        --card: #ffffff;
+        --line: #e7d8c6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans KR", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 20% 20%, #fff4e6 0%, var(--bg) 55%, #efe3d6 100%);
+      }
+
+      .wrap {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 12px 40px rgba(47, 28, 11, 0.12);
+        border: 1px solid var(--line);
+      }
+
+      .hero {
+        text-align: center;
+        padding: 18px 18px 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero:before,
+      .hero:after {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(156, 107, 59, 0.18), transparent 70%);
+        top: -40px;
+      }
+
+      .hero:before {
+        left: -30px;
+      }
+
+      .hero:after {
+        right: -40px;
+        top: 10px;
+      }
+
+      .title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 40px;
+        letter-spacing: 2px;
+        margin: 12px 0 6px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .divider {
+        width: 80px;
+        height: 2px;
+        background: var(--line);
+        margin: 18px auto;
+      }
+
+      .photo-slot {
+        margin: 24px 0;
+        height: 220px;
+        border-radius: 18px;
+        border: 2px dashed var(--line);
+        display: grid;
+        place-items: center;
+        color: #9f8b7a;
+        background: linear-gradient(135deg, #faf5ef, #f4e8da);
+        font-size: 14px;
+      }
+
+      .section {
+        margin-top: 24px;
+      }
+
+      .section h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section h2 span {
+        font-size: 12px;
+        color: var(--accent);
+        letter-spacing: 2px;
+      }
+
+      .section p,
+      .section li {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 14px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .pill {
+        background: var(--cream);
+        border-radius: 14px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+      }
+
+      .contact-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .btn {
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 12px;
+        font-size: 13px;
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .btn.secondary {
+        background: #f1e4d6;
+        color: var(--accent);
+        border: 1px solid var(--line);
+      }
+
+      ul {
+        padding-left: 16px;
+      }
+
+      .schedule {
+        display: grid;
+        gap: 10px;
+      }
+
+      .tag {
+        display: inline-flex;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        background: #f1e4d6;
+        color: var(--accent);
+        margin-left: 6px;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+        color: #8a7a6c;
+        margin-top: 30px;
+      }
+
+      @media (min-width: 640px) {
+        .wrap {
+          padding: 48px 0 80px;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card > * {
+        animation: fadeIn 0.8s ease both;
+      }
+
+      .card > *:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+
+      .card > *:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+
+      .card > *:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <section class="hero">
+          <div class="subtitle">Wedding Invitation</div>
+          <div class="title">정영욱</div>
+          <p>소중한 날, 여러분을 초대합니다.</p>
+          <div class="divider"></div>
+          <div class="photo-slot">사진 칸 (추후 업로드)</div>
+          <p>날짜 · 시간 · 장소는 아래 내용을 참고해주세요.</p>
+        </section>
+
+        <section class="section">
+          <h2>예식 안내 <span>Schedule</span></h2>
+          <div class="schedule">
+            <div class="pill">
+              <p>일시: 2024년 ○월 ○일 (토) 오후 2시</p>
+            </div>
+            <div class="pill">
+              <p>장소: ○○ 웨딩홀 3층 루미너스홀</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>오시는 길 <span>Location</span></h2>
+          <div class="grid">
+            <div class="pill">
+              <p>주소: 서울시 ○○구 ○○로 00</p>
+              <p>주차: 건물 지하 주차장 이용 가능</p>
+            </div>
+            <div class="pill">
+              <p>대중교통</p>
+              <ul>
+                <li>지하철: ○호선 ○○역 3번 출구 도보 5분</li>
+                <li>버스: 000, 000-1 정류장 하차</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>연락처 <span>Contact</span></h2>
+          <div class="pill">
+            <p>정영욱 <span class="tag">신랑/신부</span></p>
+            <p>전화: 010-0000-0000</p>
+          </div>
+          <div class="contact-buttons">
+            <a class="btn" href="tel:01000000000">전화하기</a>
+            <a class="btn secondary" href="sms:01000000000">문자 보내기</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>마음 전하실 곳 <span>Account</span></h2>
+          <div class="grid">
+            <div class="pill">
+              <p>은행: ○○은행</p>
+              <p>계좌: 000-0000-0000-00</p>
+              <p>예금주: 정영욱</p>
+            </div>
+            <div class="pill">
+              <p>은행: ○○은행</p>
+              <p>계좌: 000-0000-0000-00</p>
+              <p>예금주: ○○○</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>축하 메시지 <span>Guestbook</span></h2>
+          <div class="pill">
+            <p>따뜻한 한마디를 남겨주세요. (추후 방명록/메시지 기능 연결 가능)</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>드레스 코드 <span>Style</span></h2>
+          <div class="pill">
+            <p>따뜻한 베이지/브라운 계열의 캐주얼 포멀을 추천드립니다.</p>
+          </div>
+        </section>
+
+        <div class="footer">정영욱 모바일 청첩장</div>
+      </div>
+    </div>
+  </body>
+</html>
